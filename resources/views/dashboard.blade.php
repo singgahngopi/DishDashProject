@@ -17,6 +17,11 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Quick Recipes</h5>
                                     <p class="card-text">Find recipes that fit your busy schedule.</p>
+                                    <!-- Search Bar -->
+                                    <form method="GET" action="{{ route('recipes.search') }}">
+                                        <input type="text" name="query" class="form-control" placeholder="Search for recipes..." required>
+                                        <button type="submit" class="btn btn-primary mt-2">Search</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -48,6 +53,26 @@
             <div class="bg-white mt-8 p-6 shadow-xl sm:rounded-lg">
                 <h3 class="text-center text-2xl">About DishDash</h3>
                 <p class="text-center mt-4">DishDash is your companion for quick, affordable, and healthy meals. Designed for students, it simplifies cooking and promotes healthier eating habits. Find quick and affordable recipes that adhere to halal dietary standards.</p>
+            </div>
+
+            <!-- Saved Recipes Section -->
+            <div class="bg-white mt-8 p-6 shadow-xl sm:rounded-lg">
+                <h3 class="text-center text-2xl">Your Saved Recipes</h3>
+                @foreach($savedRecipes as $recipe)
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $recipe->name }}</h5>
+                            <p class="card-text">{{ $recipe->description }}</p>
+                            <!-- Like Button -->
+                            <form action="{{ route('recipes.like', $recipe->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-primary">Like</button>
+                            </form>
+                            <!-- Share Button -->
+                            <a href="https://twitter.com/intent/tweet?text={{ urlencode($recipe->name) }}" target="_blank" class="btn btn-outline-info mt-2">Share on Twitter</a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -31,6 +31,11 @@
         </div>
     </header>
 
+     <!-- Back to Home Link -->
+     <div class="container mt-3">
+        <a href="{{ url('/') }}" class="btn btn-secondary">Back to Home</a>
+    </div>
+
     <!-- Main Content -->
     <main class="container mt-5">
         <section id="features" class="mb-5">

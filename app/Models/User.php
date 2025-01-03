@@ -58,4 +58,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function savedRecipes()
+{
+    return $this->belongsToMany(Recipe::class); // Assuming you have a pivot table for this
 }
+
+    
+}
+
