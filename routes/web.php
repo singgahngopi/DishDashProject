@@ -40,6 +40,6 @@ Route::get('/contact', function () {
 Route::get('/recipes/search', 
 [RecipeController::class, 'search'])->name('recipes.search');
 Route::post('/recipes/save', [RecipeController::class, 'save'])->name('recipes.save');
-
+Route::post('/recipes/{recipe}/like', [RecipeController::class, 'like'])->name('recipes.like');
 
 

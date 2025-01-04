@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use App\Models\Recipe;
-
 
 class RecipeController extends Controller
 {
@@ -13,36 +11,33 @@ class RecipeController extends Controller
     {
         $query = $request->input('query');
 
-        // Use an external API or your own logic to search for recipes.
-        // For example, here we can use Spoonacular API to search recipes
-        $response = Http::get('https://api.spoonacular.com/recipes/complexSearch', [
-            'query' => $query,
-            'apiKey' => env('SPOONACULAR_API_KEY')  // Ensure you have your API key in .env file
-        ]);
-
-        $recipes = $response->json()['results'];
+        // Fetch recipes from the database using a search query
+        $recipes = Recipe::where('title', 'like', '%' . $query . '%')->get();
 
         return view('recipes.search', compact('recipes'));
     }
-}
-class RecipeController extends Controller
-{
+
     public function save(Request $request)
-    {
-        $user = auth()->user();
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'image' => 'required|url',
+    ]);
 
-        // Check if the recipe already exists in the database
-        $recipe = Recipe::firstOrCreate(
-            ['source_url' => $request->sourceUrl],
-            [
-                'title' => $request->title,
-                'image' => $request->image,
-            ]
-        );
+    $user = auth()->user();
 
-        // Attach the recipe to the authenticated user
-        $user->savedRecipes()->attach($recipe->id);
+    // Check if the recipe already exists in the database
+    $recipe = Recipe::firstOrCreate(
+        ['title' => $request->title],
+        [
+            'image' => $request->image,
+        ]
+    );
 
-        return redirect()->back()->with('success', 'Recipe saved successfully!');
-    }
+    // Attach the recipe to the authenticated user
+    $user->savedRecipes()->attach($recipe->id);
+
+    // Redirect back to the previous page with a success message
+    return redirect()->back()->with('success', 'Recipe saved successfully!');
+}
 }
