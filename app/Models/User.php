@@ -60,7 +60,7 @@ class User extends Authenticatable
     ];
     public function savedRecipes()
 {
-    return $this->belongsToMany(Recipe::class); // Assuming you have a pivot table for this
+    return $this->belongsToMany(User::class);
 }
 
     

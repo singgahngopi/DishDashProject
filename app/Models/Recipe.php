@@ -8,11 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Recipe extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'image', 'source_url'];
+    
     
     public function users()
 {
-    return $this->belongsToMany(User::class, 'recipe_user');
+    return $this->belongsToMany(User::class);
 }
+
 
 }
 

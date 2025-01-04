@@ -17,7 +17,14 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $recipe['title'] }}</h5>
                             <p class="card-text">This is a quick description of the recipe.</p>
-                            <a href="{{ $recipe['sourceUrl'] ?? '#' }}" class="btn btn-primary" target="_blank">View Recipe</a>
+                            <a href="{{ $recipe['sourceUrl'] }}" class="btn btn-primary" target="_blank">View Recipe</a>
+                                <form action="{{ route('recipes.save') }}" method="POST" class="d-inline">
+                                    @csrf
+                                    <input type="hidden" name="title" value="{{ $recipe['title'] }}">
+                                    <input type="hidden" name="image" value="{{ $recipe['image'] }}">
+                                    <input type="hidden" name="sourceUrl" value="{{ $recipe['sourceUrl'] }}">
+                                    <button type="submit" class="btn btn-success">Save Recipe</button>
+                                </form>
                         </div>
                     </div>
                 </div>
