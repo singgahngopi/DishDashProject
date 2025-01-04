@@ -59,9 +59,10 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
     public function savedRecipes()
-{
-    return $this->belongsToMany(User::class);
-}
+    {
+        return $this->belongsToMany(Recipe::class, 'recipe_user');
+    }
+    
 
     
 }
