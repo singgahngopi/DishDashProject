@@ -79,3 +79,33 @@ body {
     color: #333;
     text-align: center;
 }
+/* Button Styling for Register Button */
+.btn-primary {
+    background-color: #ffffff; /* Green color for the Register button */
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+/* Button Styling for Login Button in the Welcome Page */
+.btn-light {
+    background-color: #ffffff; /* Light gray for the Login button */
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #218838; 
+}

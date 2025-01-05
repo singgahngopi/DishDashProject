@@ -1,0 +1,169 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Background and General Layout */
+body {
+    background-color: #e9f7ef; /* Light green background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card Layout Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Limiting card width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card Header */
+.card-header {
+    background-color: #28a745; /* Green */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    
+}
+
+/* Logo Styling */
+.x-authentication-card-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 300px; /* Adjust size as needed */
+    height: 100%;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+}
+
+/* Form Label */
+.form-label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    padding-top: 2rem; /* Add top padding */
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Invalid Feedback */
+.invalid-feedback {
+    color: #e74a3b;
+    font-size: 0.875rem;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the button span the full width */
+}
+
+.btn-primary {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+/* Checkbox Label */
+.form-check-label {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+/* Checkbox Input */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Link Styling */
+.text-decoration-none {
+    text-decoration: none;
+    color: #28a745; /* Green */
+}
+
+.text-decoration-none:hover {
+    text-decoration: underline;
+}
+
+/* Footer Text Styling */
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .form-control {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Logo Styling for Register */
+.logo-img {
+    width: 120px;
+    height: auto;
+}
+
+/* Fixing alignment of the form elements */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.card-body .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.card-body .form-group input {
+    width: 100%; /* Ensure inputs take up the full width */
+}
