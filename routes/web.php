@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\DashboardController;
 /*
@@ -40,6 +41,11 @@ Route::get('/contact', function () {
 Route::get('/recipes/search', 
 [RecipeController::class, 'search'])->name('recipes.search');
 Route::post('/recipes/save', [RecipeController::class, 'save'])->name('recipes.save');
-Route::post('/recipes/{recipe}/like', [RecipeController::class, 'like'])->name('recipes.like');
 
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // Redirect to the welcome page
+})->name('logout');
+Route::delete('/recipes/{id}/remove', [RecipeController::class, 'remove'])->name('recipes.remove');
+Route::get('/recipe/{id}', [RecipeController::class, 'show'])->name('recipes.show');
 

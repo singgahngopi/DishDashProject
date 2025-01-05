@@ -1,0 +1,126 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background-color: #4CAF50; /* Green */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header .btn-danger {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header .btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* Container Styling */
+.container {
+    padding: 2rem;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-outline-primary {
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-outline-info {
+    color: #2196F3;
+    border: 1px solid #2196F3;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info:hover {
+    background-color: #2196F3;
+    color: white;
+}
+/* dashboard.css */
+.recipe-image {
+    width: 150px; /* Set the width to a fixed value */
+    height: 150px; /* Set the height to the same value to make it square */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio without stretching */
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+    margin-bottom: 10px; /* Optional: Adds spacing between the image and text */
+}
+
+
+
