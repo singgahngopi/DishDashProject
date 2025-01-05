@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::table('recipes', function (Blueprint $table) {
-        $table->unsignedBigInteger('user_id'); // Add user_id column
-        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Create a foreign key relationship with the users table
-    });
+    // Schema::table('recipes', function (Blueprint $table) {
+    //     $table->foreignId('user_id')->constrained()->onDelete('cascade');
+    // });
 }
+
 
 public function down()
 {
