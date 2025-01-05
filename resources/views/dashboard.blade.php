@@ -46,6 +46,10 @@
             </div>
         </div>
 
+        <!-- Add Recipe Button -->
+        <div class="mt-4 text-center">
+            <a href="{{ route('recipes.create') }}" class="btn btn-success btn-lg add-recipe-btn">Add New Recipe</a>        </div>
+
         <!-- Saved Recipes Section -->
         <div class="mt-8 card">
             <h3 class="text-center">Your Saved Recipes</h3>
@@ -56,9 +60,13 @@
                     <img src="{{ $recipe->image }}" class="recipe-image" alt="{{ $recipe->title }}">
 
                     <!-- View Recipe Button -->
-                    <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-info mt-2">View Recipe</a>
+                    <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-info btn-sm mt-2">View Recipe</a>
+                    <!-- Edit Recipe Button (only if the user created the recipe) -->
+                    @if($recipe->user_id === auth()->id())
+                        <a href="{{ route('recipes.edit', $recipe->id) }}" class="btn btn-warning mt-2">Edit Recipe</a>
+                    @endif
 
-                    <!-- Optionally, Add a Remove Button -->
+                    <!-- Remove Recipe Button -->
                     <form action="{{ route('recipes.remove', $recipe->id) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')

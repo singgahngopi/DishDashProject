@@ -151,3 +151,64 @@ body {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+/* General Button Styles */
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add New Recipe Button */
+.add-recipe-btn {
+    background-color: #28a745; /* Custom green */
+    color: white;
+    font-size: 1.25rem; /* Larger text */
+    padding: 15px 30px; /* Custom padding */
+    border-radius: 50px; /* Rounded corners */
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.add-recipe-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* View Recipe Button */
+.btn-info {
+    background-color: #17a2b8; /* Blue color for view */
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496; /* Darker blue on hover */
+}
+
+/* Edit Recipe Button */
+.btn-warning {
+    background-color: #ffc107; /* Yellow color for edit */
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+/* General Button Styling for small buttons */
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+}
+
+/* Ensures the buttons are spaced properly */
+.mt-2 {
+    margin-top: 10px;
+}
+
+/* Add space between the cards and buttons */
+.card {
+    margin-bottom: 20px;
+}
+
