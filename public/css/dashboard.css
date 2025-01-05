@@ -20,8 +20,10 @@ body {
 .header {
     background-color: #4CAF50; /* Green */
     color: white;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem 20px; /* Adjust padding for logo and title spacing */
+    display: flex;
+    justify-content: space-between; /* Align logo and title */
+    align-items: center; /* Align items vertically */
 }
 
 /* Header Title Styling */
@@ -29,13 +31,14 @@ body {
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
+    flex-grow: 1; /* Ensures the title is centered */
+    text-align: center;
 }
 
 /* Logo Styling */
 .logo-img {
-    width: 120px; /* Adjust size */
+    width: 100px; /* Adjust the size of the logo */
     height: auto;
-    margin-bottom: 20px;
 }
 
 /* Dashboard Card Styling */
@@ -77,12 +80,12 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #28a745;
 }
 
 .btn-success {
@@ -109,6 +112,7 @@ body {
     color: white;
     padding: 1rem;
     text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
 /* Flexbox Layout for Centering */

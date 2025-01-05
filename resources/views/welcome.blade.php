@@ -17,13 +17,13 @@
             <h1 class="text-white">DishDash Dashboard</h1>
             <div class="d-flex align-items-center">
                 <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/features') }}">Features</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/about') }}">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/contact') }}">Contact</a></li>
-                    </ul>
-                </nav>
-                
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/features') }}">Features</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/about') }}">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url('/contact') }}">Contact</a></li>
+    </ul>
+</nav>
+
                 <div class="ms-3">
                     <a href="{{ route('login') }}" class="btn btn-light btn-sm me-2">Login</a>
                     <a href="{{ route('register') }}" class="btn btn-primary btn-sm">Register</a>

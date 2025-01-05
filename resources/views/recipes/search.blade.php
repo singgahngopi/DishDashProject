@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Search Results</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
 </head>
 <body>
     <div class="container mt-5">

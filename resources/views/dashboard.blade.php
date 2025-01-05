@@ -8,8 +8,11 @@
 </head>
 <body>
     <header class="header">
+        <div class="logo-container">
+            <img src="{{ asset('images/logo.jpg') }}" alt="DishDash Logo" class="logo-img">
+        </div>
         <h2>DishDash Dashboard</h2>
-        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+        <form action="{{ route('logout') }}" method="POST" class="logout-form">
             @csrf
             <button type="submit" class="btn btn-danger">Logout</button>
         </form>
@@ -65,5 +68,11 @@
             @endforeach
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 DishDash. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

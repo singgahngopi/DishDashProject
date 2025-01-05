@@ -3,12 +3,12 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100%;
+    height: 50%;
 }
 
 /* Background and General Layout */
 body {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #e9f7e6; /* Light greenish background */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -25,31 +25,15 @@ body {
     padding: 1rem 0;
     text-align: center;
     width: 100%;
+    margin: 0 auto; /* Centers the header */
+    height: 45%;
 }
 
 /* Header Title Styling */
 .header h1 {
-    margin: 0;
+    margin: 10;
     font-size: 2rem;
     font-weight: bold;
-}
-
-/* Logo Styling */
-.logo-img {
-    width: 150px; /* Adjust size */
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Recipe Card Styling */
-.recipe-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-    margin-top: 30px;
 }
 
 /* Recipe Image */
@@ -62,7 +46,7 @@ body {
 }
 
 /* Recipe Title */
-.recipe-title {
+h2 {
     font-size: 2rem;
     color: #4CAF50;
     margin-bottom: 20px;
@@ -70,12 +54,13 @@ body {
 }
 
 /* Recipe Description */
-.recipe-description {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+h4 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
 }
 
-/* Ingredients and Instructions */
+/* Ingredients and Instructions List */
 ul {
     list-style-type: square;
     padding-left: 20px;
@@ -87,10 +72,10 @@ ul li {
     margin-bottom: 10px;
 }
 
-h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 /* Button Styling */
@@ -101,24 +86,6 @@ h4 {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-success {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-success:hover {
-    background-color: #218838;
 }
 
 .btn-secondary {
@@ -132,16 +99,20 @@ h4 {
 
 /* Footer Styling */
 .footer {
-    background-color: #333;
+    background-color: #4CAF50; /* Green Footer */
     color: white;
     padding: 1rem;
     text-align: center;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding-bottom: 20px; /* Adds space inside footer */
 }
 
-/* Text Center Styling */
-.text-center {
-    color: #333;
+/* Adjust spacing between button and footer */
+.container {
+    margin-bottom: 60px; /* Adds more space between the button and footer */
+}
+.logo-img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
 }
