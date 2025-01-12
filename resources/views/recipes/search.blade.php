@@ -12,7 +12,7 @@
 <body>
 <header class="header">
     <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
+        <!-- Logo 1 -->
         <div class="logo">
             <img src="{{ asset('images/logoheader.png') }}" alt="Logo" class="logo-img" />
         </div>
@@ -98,7 +98,7 @@
             </div>
         @endif
     </div><br>
-    
+
 
     <!-- Footer -->
     <footer class="footer">
