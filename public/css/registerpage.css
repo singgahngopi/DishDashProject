@@ -2,37 +2,46 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     height: 100%;
 }
 
 /* Background and General Layout */
 body {
-    background-color: #e9f7ef; /* Light green background */
+    background-color: #f4f8f9; /* Light background color */
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: Montserrat, sans-serif;
 }
 
 /* Card Layout Styling */
 .card {
-    border: none;
+    /* border: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     padding: 40px;
     width: 100%;
-    max-width: 400px; /* Limiting card width */
+    max-width: 400px; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+    text-align: center;
 }
 
 /* Card Header */
-.card-header {
-    background-color: #28a745; /* Green */
+/* .card-header {
+    background-color: #28a745; 
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
@@ -40,38 +49,55 @@ body {
     padding: 1rem;
     width: 100%;
     
-}
+} */
 
 /* Logo Styling */
-.x-authentication-card-logo {
+/* .x-authentication-card-logo {
     display: block;
     margin: 0 auto 20px;
-    width: 300px; /* Adjust size as needed */
+    width: 500px; 
     height: 100%;
-}
+} */
 
 /* Form Styling */
 form {
     width: 100%;
+    text-align: left;
+}
+
+.mb-3{
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 /* Form Label */
 .form-label {
-    font-size: 1rem;
+    /* font-size: 1rem;
     color: #333;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    padding-top: 2rem; /* Add top padding */
+    padding-top: 2rem;  */
+    /* Add top padding */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
 /* Input Fields */
 .form-control {
-    border-radius: 5px;
+    /* border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 100%; */
+    background-color: rgb(159, 197, 232);
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 92.5%;
+    border-radius: 10px;
+    font-family: Montserrat, sans-serif;
 }
 
 /* Invalid Feedback */
@@ -81,23 +107,48 @@ form {
 }
 
 /* Button Styling */
-.btn {
-    padding: 10px 20px;
+/* .btn { */
+    /* padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    width: 100%; /* Make the button span the full width */
-}
+    width: 100%;  */
+    /* Make the button span the full width */
+    /* width: 100%;
+    padding: 12px;
+    background-color: rgb(106, 41, 131);
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: transform 80ms ease-in;
+    letter-spacing: 1px; */
+/* } */
 
 .btn-primary {
-    background-color: #28a745; /* Green */
+    background-color: rgb(106, 41, 131);
     color: white;
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(106, 41, 131);
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: transform 80ms ease-in;
+    letter-spacing: 1px;
 }
 
 .btn-primary:hover {
-    background-color: #218838; /* Darker Green */
+    opacity: 0.8;
 }
 
 /* Checkbox Label */
@@ -110,16 +161,6 @@ form {
 .form-check-input {
     width: 20px;
     height: 20px;
-}
-
-/* Link Styling */
-.text-decoration-none {
-    text-decoration: none;
-    color: #28a745; /* Green */
-}
-
-.text-decoration-none:hover {
-    text-decoration: underline;
 }
 
 /* Footer Text Styling */
@@ -166,4 +207,19 @@ form {
 
 .card-body .form-group input {
     width: 100%; /* Ensure inputs take up the full width */
+}
+
+.d-flex{
+    margin-bottom: 20px;
+}
+.text-decoration-none{
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block; /* Ensures proper margin application */
+    margin-bottom: 15px; /* Space below the link */
+}
+
+.text-decoration-none:hover {
+    text-decoration: underline;
 }

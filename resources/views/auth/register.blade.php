@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('css/registerpage.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/emblem.png') }}">
 </head>
 <body class="bg-light">
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+    <!-- <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6"> -->
                 <div class="card">
-                    <div class="card-header text-center">
+                    <div class="card-header">
                         <!-- Logo Section -->
             <div class="login-logo">
-                <img src="{{ asset('images/logo.jpg') }}" alt="Logo" class="logo-img">
-            </div>
-                        <h4>Register</h4>
-                        
-                    </div>
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+                <h1>CREATE AN ACCOUNT</h1>
+
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -76,15 +75,14 @@
                                     {{ __('Already registered?') }}
                                 </a>
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('REGISTER') }}
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
+            <!-- </div>
         </div>
-    </div>
-
+    </div> -->
 </body>
 </html>

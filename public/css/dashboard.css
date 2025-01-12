@@ -1,14 +1,12 @@
-/* General Reset */
-body, html {
+/* body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
 }
 
-/* Background and General Layout */
 body {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -16,51 +14,249 @@ body {
     height: 100vh;
 }
 
-/* Header Styling */
 .header {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
-    padding: 1rem 20px; /* Adjust padding for logo and title spacing */
+    padding: 1rem 20px; 
     display: flex;
-    justify-content: space-between; /* Align logo and title */
-    align-items: center; /* Align items vertically */
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-/* Header Title Styling */
 .header h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
-    flex-grow: 1; /* Ensures the title is centered */
+    flex-grow: 1; 
     text-align: center;
+} */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    height: 100%;
+}
+
+/* General Styling */
+.header {
+    background-color: rgb(116, 144, 168);
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+.container h2{
+    margin-right: 100px;
+    margin-top: 13px;
+    font-weight: bold;
+}
+
+.mobile-nav h2{
+    margin-right: 0px;
+}
+
+/* Buttons */
+.btn-danger {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: rgb(11, 83, 148);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    /* background-color: white; */
+    border: none;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 0;
+    /* transform: translateY(-50%); */
+}
+
+.navbar-toggler:hover {
+    color: rgb(11, 83, 148);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    display: none;
+    background-color: rgb(116, 144, 168);
+    padding: 1rem;
+}
+
+.mobile-nav .nav{
+    display: flex; 
+    justify-content: center;
+    padding: 0; 
+    margin: 0; 
+    margin-left: 30px;
+}
+
+.mobile-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
 }
 
 /* Logo Styling */
 .logo-img {
-    width: 100px; /* Adjust the size of the logo */
+    width: 220px; /* Adjust size */
     height: auto;
+    margin-bottom: 2px;
 }
+
+.tagline-section {
+    background-color: #e9edee;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Optional: adds a bottom border */
+    position: relative; /* Make it work with z-index */
+    z-index: 0; /* Lower layer */
+}
+
+.tagline-section .dish {
+    font-weight: normal; /* Normal weight for "Dish" */
+    color: black;
+}
+
+.tagline-section .dash {
+    font-weight: 650; /* Extra-bold for "Dash" */
+    font-style: italic; /* Italic style for "Dash" */
+    color: black;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set desired height for the video */
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensures the image stays in the background */
+}
+
+/* Dark overlay to darken the video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* Dark semi-transparent layer */
+    z-index: 1; /* Ensure overlay is above the video */
+}
+
+/* Welcoming text */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* White text */
+    text-align: center;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+.welcome-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px; /* Add some space between the text and button */
+}
+
+.btn-make {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent; /* No fill color */
+    color: #fff; /* White text color */
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #fff; /* White border */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the button */
+.btn-make:hover {
+    background-color: #e9edee; /* Light background on hover */
+    border-color: black; /* Change border color on hover */
+    color: black; /* Change text color on hover */
+}
+
 
 /* Dashboard Card Styling */
 .card {
     border: none;
-    background-color: #f8f9fa;
+    background-color: #f4f8f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     margin: 10px 0;
     padding: 20px;
+    min-height: 215px;
+    align-items: center; /* Center align horizontally */
+    text-align: center; /* Center text for content */
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card form{
+    margin-top: auto;
+    width: 100%;
 }
+
+.card button{
+    min-width: 175px;
+}
+/* .card:hover {
+    transform: translateY(-5px);
+} */
 
 /* Card Title */
 .card-title {
-    color: #4CAF50;
+    color: rgb(11, 83, 148);
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Card Text */
@@ -70,22 +266,29 @@ body {
 }
 
 /* Button Styling */
-.btn {
+/* .btn {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
+} */
 
 .btn-primary {
-    background-color: #28a745;
+    background-color: rgb(11, 83, 148);
     color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid rgb(11, 83, 148);
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #28a745;
+    background-color: white;
+    color: black;
 }
 
 .btn-success {
@@ -106,24 +309,16 @@ body {
     background-color: #5a6268;
 }
 
-/* Footer Styling */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    margin-top: auto; /* Pushes footer to the bottom */
-}
 
 /* Flexbox Layout for Centering */
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 50px;
-}
+} */
 
 /* Section Styling */
 .section {
@@ -133,16 +328,15 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Text Styling */
-.footer p {
-    font-size: 0.9rem;
-}
-
 /* Text Center Styling */
 .text-center {
     color: #333;
+    text-align: center;
+    font-size: 1.8rem;
+    /* font-weight: bold; */
+    margin-bottom: 1rem;
+    text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
 }
-
 /* Image Styling for the Recipe */
 .recipe-image {
     width: 100%;
@@ -208,7 +402,88 @@ body {
 }
 
 /* Add space between the cards and buttons */
-.card {
+/* .card {
     margin-bottom: 20px;
+} */
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; 
 }
 
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer-contact p {
+    margin: 0; /* Remove extra margin for text */
+    line-height: 1.6; /* Add spacing between lines */
+    text-align: left;
+}
+
+.footer-nav .nav-list {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal layout */
+    gap: 1rem; /* Spacing between navigation items */
+}
+
+.footer-nav .nav-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    padding: 0 0.5rem; /* Padding inside each link */
+    border-left: 1px solid #fff; /* Separator between links */
+}
+
+.footer-nav .nav-link:first-child {
+    border-left: none; /* Remove separator for the first link */
+}
+
+.footer-nav .nav-link:hover {
+    color: #f0a500; /* Highlight color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav .nav-list {
+        justify-content: center; /* Center-align navigation links */
+        gap: 0.5rem;
+    }
+
+    .footer-contact {
+        margin-top: 1rem; /* Add spacing below the logo */
+    }
+}

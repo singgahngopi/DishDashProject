@@ -6,6 +6,7 @@
     <title>Login</title>
     <!-- Link to the CSS file -->
     <link rel="stylesheet" href="{{ asset('css/loginpage.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/emblem.png') }}">
 </head>
 <body>
 
@@ -14,7 +15,8 @@
         <div class="login-card">
             <!-- Logo Section -->
             <div class="login-logo">
-                <img src="{{ asset('images/logo.jpg') }}" alt="Logo" class="logo-img">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+                <h1>LOG IN TO YOUR ACCOUNT</h1>
             </div>
 
             <!-- Validation Errors Section -->
@@ -47,7 +49,7 @@
                 <div class="form-group remember-me">
                     <label for="remember_me" class="remember-me-label">
                         <input type="checkbox" id="remember_me" name="remember" class="remember-me-checkbox">
-                        {{ __('Remember me') }}
+                        {{ __('Remember Me') }}
                     </label>
                 </div>
 
@@ -62,7 +64,7 @@
 
                 <!-- Submit Button -->
                 <div class="form-group">
-                    <button type="submit" class="btn-primary">{{ __('Log in') }}</button>
+                    <button type="submit" class="btn-primary">{{ __('LOG IN') }}</button>
                 </div>
             </form>
         </div>

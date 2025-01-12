@@ -1,51 +1,349 @@
-/* General Reset */
+/* 
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%; /* Ensures full height of the page */
+    font-family: Montserrat, sans-serif;
+    height: 100%; 
 }
 
-/* Background and General Layout */
 body {
-    background-color: #e9f7e6; /* Light greenish background */
+    background-color: #ffffff;
     color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures footer is pushed to the bottom */
+    justify-content: space-between; 
     align-items: center;
     padding: 20px;
     height: 100%;
 }
 
-/* Header Styling */
 .header {
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(146, 180, 210);
     padding: 1rem 0;
     width: 100%;
     text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+.nav li{
+    font-weight: bold;
+} */
+
+body, html {
     margin: 0;
-    font-size: 2.5rem; /* Increase font size */
-    font-weight: 700; /* Make the font bold */
-    color: white;
-    font-family: 'Roboto', sans-serif; /* Apply the new font to the header */
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
 }
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    height: 100%;
+}
+
+/* General Styling */
+.header {
+    background-color: rgb(116, 144, 168);
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+/* Navigation Links */
+.nav li {
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav li a:hover {
+    color: rgb(11, 83, 148);
+}
+
+.nav-link.active {
+    color: rgb(11, 83, 148);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgb(11, 83, 148);
+}
+
+.btn-submit {
+    background-color: rgb(11, 83, 148);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    float: right;
+}
+
+.btn-submit:hover {
+    background-color: rgb(116, 144, 168);
+    color: white;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    /* background-color: white; */
+    border: none;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 0;
+    /* transform: translateY(-50%); */
+}
+
+.navbar-toggler:hover {
+    color: rgb(11, 83, 148);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    display: none;
+    background-color: rgb(116, 144, 168);
+    padding: 1rem;
+}
+
+.mobile-nav .nav{
+    display: flex; 
+    justify-content: center;
+    padding: 0; 
+    margin: 0; 
+    margin-left: 30px;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-nav .nav-link:hover {
+    color: rgb(11, 83, 148);
+}
+
+
+/* .header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    font-family: Montserrat, sans-serif;
+} */
 
 /* Logo Styling */
 .logo-img {
-    width: 120px; /* Adjust size */
+    width: 220px; /* Adjust size */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+}
+
+.tagline-section {
+    background-color: #e9edee;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Optional: adds a bottom border */
+    position: relative; /* Make it work with z-index */
+    z-index: 0; /* Lower layer */
+}
+
+.tagline-section .dish {
+    font-weight: normal; /* Normal weight for "Dish" */
+    color: black;
+}
+
+.tagline-section .dash {
+    font-weight: 650; /* Extra-bold for "Dash" */
+    font-style: italic; /* Italic style for "Dash" */
+    color: black;
+}
+
+/* Style for the SVG container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set desired height for the video */
+    overflow: hidden;
+}
+
+/* Dark overlay to darken the video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* Dark semi-transparent layer */
+    z-index: 1; /* Ensure overlay is above the video */
+}
+
+/* Video itself */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust width to fill container */
+    height: 100%; /* Make the video fill the container */
+    object-fit: cover; /* Ensure the video covers the container area */
+    z-index: 0; /* Place video below the overlay */
+}
+
+/* Welcoming text */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* White text */
+    text-align: center;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+.welcome-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px; /* Add some space between the text and button */
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent; /* No fill color */
+    color: #fff; /* White text color */
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #fff; /* White border */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the button */
+.get-started-btn:hover {
+    background-color: #e9edee; /* Light background on hover */
+    border-color: black; /* Change border color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.col-md-6 .dish {
+    font-weight: normal; /* Normal weight for "Dish" */
+    color: rgb(116, 144, 168)
+}
+
+.col-md-6 .dash {
+    font-weight: 650; /* Extra-bold for "Dash" */
+    font-style: italic; /* Italic style for "Dash" */
+    color: rgb(116, 144, 168)
+}
+
+.about-section {
+    padding: 3rem 0; /* Space around the section */
+    /* background-color: #f8f9fa; */
+}
+
+.about-section .row {
+    display: flex;
+    align-items: center; /* Vertically align content */
+}
+
+.about-section img {
+    max-width: 100%; /* Make the image responsive */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+}
+
+.about-section p {
+    font-size: 1rem;
+    color: #333; /* Subtle text color */
+    line-height: 1.8; /* Better readability */
+}
+
+@media (max-width: 768px) {
+    .about-section .row {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+
+    .about-section img {
+        margin-bottom: 1.5rem; /* Add space between image and text */
+    }
+}
+
+.about-section .btn {
+    display: inline-block; /* Makes it behave like a button */
+    padding: 0.8rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #fff; /* Button text color */
+    background-color: rgb(116, 144, 168); /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underline for links */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.about-section .btn:hover {
+    background-color: rgb(11, 83, 148); /* Darker blue on hover */
+    color: #fff; /* Ensure text stays white */
 }
 
 /* Card Styling */
 .card {
-    border: none;
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #333;
+    background-color: #f4f8f9;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: transform 0.3s ease;
     padding: 20px;
     margin: 10px 0;
@@ -58,7 +356,7 @@ body {
 
 /* Card Title */
 .card-title {
-    color: #4CAF50;
+    color: rgb(11, 83, 148);
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -71,41 +369,107 @@ body {
     padding: 1rem;
     width: 100%;
     text-align: center;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto; 
 }
 
 /* Text Center Styling */
 .text-center {
     color: #333;
     text-align: center;
-}
-/* Button Styling for Register Button */
-.btn-primary {
-    background-color: #ffffff; /* Green color for the Register button */
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
 }
 
-.btn-primary:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-/* Button Styling for Login Button in the Welcome Page */
-.btn-light {
-    background-color: #ffffff; /* Light gray for the Login button */
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
+.text-center .dish {
+    font-weight: normal; /* Normal weight for "Dish" */
+    color: rgb(116, 144, 168);
 }
 
-.btn-light:hover {
-    background-color: #218838; 
+.text-center .dash {
+    font-weight: 650; /* Extra-bold for "Dash" */
+    font-style: italic; /* Italic style for "Dash" */
+    color: rgb(116, 144, 168);
+}
+
+.short-desc {
+    color: #333;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer-contact p {
+    margin: 0; /* Remove extra margin for text */
+    line-height: 1.6; /* Add spacing between lines */
+    text-align: left;
+}
+
+.footer-nav .nav-list {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal layout */
+    gap: 1rem; /* Spacing between navigation items */
+}
+
+.footer-nav .nav-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    padding: 0 0.5rem; /* Padding inside each link */
+    border-left: 1px solid #fff; /* Separator between links */
+}
+
+.footer-nav .nav-link:first-child {
+    border-left: none; /* Remove separator for the first link */
+}
+
+.footer-nav .nav-link:hover {
+    color: #f0a500; /* Highlight color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav .nav-list {
+        justify-content: center; /* Center-align navigation links */
+        gap: 0.5rem;
+    }
+
+    .footer-contact {
+        margin-top: 1rem; /* Add spacing below the logo */
+    }
 }
