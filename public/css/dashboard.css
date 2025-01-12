@@ -79,7 +79,7 @@ body {
 }
 
 .btn-danger:hover {
-    background-color: rgb(11, 83, 148);
+    background-color: rgb(200, 75, 75);
 }
 
 /* Navbar Toggler */
@@ -177,7 +177,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.65); /* Dark semi-transparent layer */
+    background-color: rgba(0, 0, 0, 0.35); /* Dark semi-transparent layer */
     z-index: 1; /* Ensure overlay is above the video */
 }
 
@@ -229,7 +229,7 @@ body {
 .card {
     border: none;
     background-color: #f4f8f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2),0 6px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
     margin: 10px 0;
     padding: 20px;
@@ -279,7 +279,7 @@ body {
     background-color: rgb(11, 83, 148);
     color: white;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 7.5px 15px;
     font-size: 1rem;
     cursor: pointer;
     border: 2px solid rgb(11, 83, 148);
@@ -289,6 +289,42 @@ body {
 .btn-primary:hover {
     background-color: white;
     color: black;
+    border: 2px solid rgb(11, 83, 148);
+}
+
+.btn-remove {
+    background-color: rgb(200, 75, 75);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid rgb(200, 75, 75);
+    transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(200, 75, 75);
+}
+
+/* Edit Recipe Button */
+.btn-warning {
+    background-color: #ffc107; /* Yellow color for edit */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #ffc107;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #ffc107; /* Darker yellow on hover */
 }
 
 .btn-success {
@@ -346,13 +382,13 @@ body {
     margin-bottom: 20px;
 }
 /* General Button Styles */
-.btn {
+/* .btn {
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
+} */
 
 /* Add New Recipe Button */
 .add-recipe-btn {
@@ -371,24 +407,24 @@ body {
 }
 
 /* View Recipe Button */
-.btn-info {
-    background-color: #17a2b8; /* Blue color for view */
+
+/* .btn-info {
+    background-color: rgb(11, 83, 148);
     color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid rgb(11, 83, 148);
+    transition: background-color 0.3s ease;
 }
 
 .btn-info:hover {
-    background-color: #138496; /* Darker blue on hover */
-}
-
-/* Edit Recipe Button */
-.btn-warning {
-    background-color: #ffc107; /* Yellow color for edit */
+    background-color: white;
     color: black;
-}
+} */
 
-.btn-warning:hover {
-    background-color: #e0a800; /* Darker yellow on hover */
-}
+
 
 /* General Button Styling for small buttons */
 .btn-sm {

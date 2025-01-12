@@ -24,6 +24,10 @@ body {
     top: 0;
 }
 
+.nav-link:hover {
+    color: white;
+}
+
 .container h2{
     margin-right: 100px;
     margin-top: 13px;
@@ -110,69 +114,11 @@ body {
     z-index: 0; /* Lower layer */
 }
 
-.nav-link:hover {
-    color: white;
+.form-label{
+    font-weight: 500;
 }
 
-.show h1{
-    color: #333;
-}
-
-/* Alert Messages */
-.alert {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/* Recipe Card Styling */
-.card {
-    border: none;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2),0 6px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Card Image */
-.card-img-top {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-/* Card Body */
-.card-body {
-    padding: 20px;
-}
-
-/* Card Title */
-.card-title {
-    color: rgb(11, 83, 148);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Card Text */
-.card-text {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.card form{
-    margin-top: auto;
-    width: 100%;
-    align-items: center;
-}
-/* Button Styling */
-
-/* Success Button */
-.btn-success {
+.btn-primary {
     background-color: rgb(11, 83, 148);
     color: white;
     border-radius: 5px;
@@ -183,61 +129,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-success:hover {
+.btn-primary:hover {
     background-color: white;
     color: black;
     border: 2px solid rgb(11, 83, 148);
-}
-
-/* Primary Button */
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Back to Dashboard Button Styling */
-.mt-4 {
-    margin-top: 30px;
-}
-
-/* Empty Results Styling */
-.alert-warning {
-    background-color: #fff3cd;
-    border-color: #ffeeba;
-    color: #856404;
-    margin-bottom: 30px;
-}
-
-/* Flexbox for Card Layout */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Column Styling */
-.col-md-4 {
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .col-md-4 {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .col-md-4 {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 .footer {

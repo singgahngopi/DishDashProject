@@ -2,38 +2,131 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 50%;
-}
-
-/* Background and General Layout */
-body {
-    background-color: #e9f7e6; /* Light greenish background */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
+    font-family: Montserrat, sans-serif;
     height: 100%;
 }
 
-/* Header Styling */
-.header {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto; /* Centers the header */
-    height: 45%;
+body {
+    background-color: #ffffff;
+    color: black;
+    height: 100%;
 }
 
-/* Header Title Styling */
-.header h1 {
-    margin: 10;
-    font-size: 2rem;
+/* General Styling */
+.header {
+    background-color: rgb(116, 144, 168);
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.container h2{
+    margin-right: 100px;
+    margin-top: 13px;
     font-weight: bold;
+}
+
+.mobile-nav h2{
+    margin-right: 0px;
+}
+
+/* Buttons */
+.btn-danger {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: rgb(200, 75, 75);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    /* background-color: white; */
+    border: none;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 0;
+    /* transform: translateY(-50%); */
+}
+
+.navbar-toggler:hover {
+    color: rgb(11, 83, 148);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    display: none;
+    background-color: rgb(116, 144, 168);
+    padding: 1rem;
+}
+
+.mobile-nav .nav{
+    display: flex; 
+    justify-content: center;
+    padding: 0; 
+    margin: 0; 
+    margin-left: 30px;
+}
+
+.mobile-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo Styling */
+.logo-img {
+    width: 220px; /* Adjust size */
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.tagline-section {
+    background-color: #e9edee;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Optional: adds a bottom border */
+    position: relative; /* Make it work with z-index */
+    z-index: 0; /* Lower layer */
+}
+
+.tagline-section .dish {
+    font-weight: normal; /* Normal weight for "Dish" */
+    color: black;
+}
+
+.tagline-section .dash {
+    font-weight: 650; /* Extra-bold for "Dash" */
+    font-style: italic; /* Italic style for "Dash" */
+    color: black;
+}
+
+.text-recipe{
+    color: rgb(11, 83, 148);
 }
 
 /* Recipe Image */
@@ -46,22 +139,22 @@ body {
 }
 
 /* Recipe Title */
-h2 {
+/* h2 {
     font-size: 2rem;
     color: #4CAF50;
     margin-bottom: 20px;
     font-weight: bold;
-}
+} */
 
 /* Recipe Description */
-h4 {
+/* h4 {
     font-size: 1.5rem;
     color: #4CAF50;
     margin-bottom: 10px;
-}
+} */
 
 /* Ingredients and Instructions List */
-ul {
+/* ul {
     list-style-type: square;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -76,17 +169,8 @@ p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #555;
-}
+} */
 
-/* Button Styling */
-.btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
 .btn-secondary {
     background-color: #6c757d;
@@ -99,20 +183,82 @@ p {
 
 /* Footer Styling */
 .footer {
-    background-color: #4CAF50; /* Green Footer */
+    background-color: #333;
     color: white;
     padding: 1rem;
-    text-align: center;
     width: 100%;
-    margin-top: auto; /* Pushes footer to the bottom */
-    padding-bottom: 20px; /* Adds space inside footer */
+    text-align: center;
+    margin-top: auto; 
 }
 
-/* Adjust spacing between button and footer */
-.container {
-    margin-bottom: 60px; /* Adds more space between the button and footer */
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    font-size: 0.9rem;
 }
-.logo-img {
-    width: 100px; /* Adjust the size of the logo */
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px; /* Adjust logo size */
     height: auto;
+}
+
+.footer-contact p {
+    margin: 0; /* Remove extra margin for text */
+    line-height: 1.6; /* Add spacing between lines */
+    text-align: left;
+}
+
+.footer-nav .nav-list {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal layout */
+    gap: 1rem; /* Spacing between navigation items */
+}
+
+.footer-nav .nav-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    padding: 0 0.5rem; /* Padding inside each link */
+    border-left: 1px solid #fff; /* Separator between links */
+}
+
+.footer-nav .nav-link:first-child {
+    border-left: none; /* Remove separator for the first link */
+}
+
+.footer-nav .nav-link:hover {
+    color: #f0a500; /* Highlight color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav .nav-list {
+        justify-content: center; /* Center-align navigation links */
+        gap: 0.5rem;
+    }
+
+    .footer-contact {
+        margin-top: 1rem; /* Add spacing below the logo */
+    }
 }

@@ -120,23 +120,23 @@
             <div class="card">
                 <h3 class="text-center">Your Saved Recipes</h3>
                 @foreach($savedRecipes as $recipe)
-                    <div class="card mt-3">
+                    <div class="card mt-3" style="border: 0.5px solid black;">
                         <h5 class="card-title">{{ $recipe->title }}</h5>
                         <p class="card-text">{{ $recipe->description }}</p>
                         <img src="{{ $recipe->image }}" class="recipe-image" alt="{{ $recipe->title }}">
 
                         <!-- View Recipe Button -->
-                        <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-info btn-sm mt-2">View Recipe</a>
+                        <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-primary btn-sm mt-2" style="min-width: 175px;">View Recipe</a>
                         <!-- Edit Recipe Button (only if the user created the recipe) -->
                         @if($recipe->user_id === auth()->id())
-                            <a href="{{ route('recipes.edit', $recipe->id) }}" class="btn btn-warning mt-2">Edit Recipe</a>
+                            <a href="{{ route('recipes.edit', $recipe->id) }}" class="btn btn-warning btn-sm mt-2" style="min-width: 175px;">Edit Recipe</a>
                         @endif
 
                         <!-- Remove Recipe Button -->
                         <form action="{{ route('recipes.remove', $recipe->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger mt-2">Remove Recipe</button>
+                            <button type="submit" class="btn btn-remove btn-sm mt-2" style="min-width: 175px;">Remove Recipe</button>
                         </form>
                     </div>
                 @endforeach

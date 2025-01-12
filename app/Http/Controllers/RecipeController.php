@@ -20,7 +20,7 @@ class RecipeController extends Controller
         return redirect()->route('dashboard')->with('error', 'Sorry, no recipes found for your search.');
     }
 
-    return view('recipes.search', compact('recipes'));
+    return view('recipes.search', compact('query', 'recipes'));
 }
 
 

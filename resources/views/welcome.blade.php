@@ -119,26 +119,29 @@
             <h2 class="text-center">Why Choose <span class="dish">Dish</span><span class="dash">Dash</span><span class="dish">™</span>?</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
+                <div class="card">
+                        <div class="card-body" style="min-height: 240px">
+                            <img src="images/QuickRecipes.png" class="card-img-top mx-auto d-block" alt="Quick Recipes" style="height: 100px; width: auto;">
                             <h5 class="card-title">Quick Recipes</h5>
-                            <p class="card-text">Find recipes that fit your busy schedule.</p>
+                            <p class="card-text">Find recipes that fit your busy schedule and enjoy a healthy meal in no time.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" style="min-height: 240px">
+                            <img src="images/AffordableMeals.png" class="card-img-top mx-auto d-block" alt="Quick Recipes" style="height: 100px; width: auto;">
                             <h5 class="card-title">Affordable Meals</h5>
-                            <p class="card-text">Cook nutritious meals on a budget.</p>
+                            <p class="card-text">Cook delicious and nutritious meals on a budget with our simple recipes.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" style="min-height: 240px">
+                            <img src="images/HalalCommpliant.png" class="card-img-top mx-auto d-block" alt="Quick Recipes" style="height: 100px; width: auto;">
                             <h5 class="card-title">Halal-Compliant</h5>
-                            <p class="card-text">All recipes follow Islamic dietary laws.</p>
+                            <p class="card-text">All recipes follow Islamic dietary laws, ensuring you eat according to your values.</p>
                         </div>
                     </div>
                 </div>
