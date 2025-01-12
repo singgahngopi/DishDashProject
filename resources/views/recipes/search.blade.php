@@ -98,6 +98,7 @@
             </div>
         @endif
     </div><br>
+    
 
     <!-- Footer -->
     <footer class="footer">
